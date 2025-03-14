@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href=".cstyless">
+    <title>Laboratorio 3</title>
+  </head>
+  <body>
+    <main>
+      <h1>Formulario de Tareas</h1>
+      <h4>Ingresa la información principal de tus tareas mensuales</h4>
+      <form id="formulario">
+        <label for="nombre_Tarea" name="">Nombre de la Tarea: </label>
+        <input type="text" id="nombre_Tarea" name="nombre_Tarea" placeholder="Ingresa el nombre de la tarea">
+        
+        <label for="fecha_Tarea" name="">Fecha de la Tarea: </label>
+        <input type="date" id="fecha_Tarea" name="fecha_Tarea" placeholder="Ingresa la fecha limite para la tarea">
+
+        <label for="hora_Tarea" name="">Hora de la Tarea: </label>
+        <input type="date" id="hora_Tarea" name="hora_Tarea" placeholder="Ingresa la hora limite para la tarea">
+
+        <label for="descripcion" name="">Descripción de la Tarea</label>
+        <textarea name="descripcion" id="descripcion" placeholder="Ingresa una descripcion clara sobre la tarea que debes realizar."></textarea>
+
+        <div id="buttons">
+            <button id="crear" onclick="crear()">Crear tarea</button>
+            <button id="consultar" onclick="consultar()">Consultar tarea</button>
+            <button id="actualizar" onclick="actualizar()">Actualizar tarea</button>
+            <button id="eliminar" onclick="eliminar()">Eliminar tarea</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
