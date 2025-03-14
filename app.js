@@ -10,3 +10,16 @@ function crear(){
     localStorage.setItem("hora_Tarea", hora);
     localStorage.setItem("descripcion", descripcion);
 }
+
+// Consultar Tarea
+function consultar(){
+    let nombre = localStorage.getItem("nombre_Tarea");
+    let fecha = localStorage.getItem("fecha_Tarea");
+    let hora = localStorage.getItem("hora_Tarea");
+    let descripcion =localStorage.getItem("descripcion");
+
+    document.getElementById("nombre_Tarea").value = nombre;
+    document.getElementById("fecha_Tarea").value = fecha;
+    document.getElementById("hora_Tarea").value = hora;
+    document.getElementById("descripcion").value = descripcion;    
+}
