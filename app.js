@@ -36,3 +36,11 @@ function actualizar(){
     localStorage.setItem("hora_Tarea", hora);
     localStorage.setItem("descripcion", descripcion);
 }
+
+// Eliminar Tarea
+function eliminar(){
+    localStorage.removeItem("nombre_Tarea");
+    localStorage.removeItem("fecha_Tarea");
+    localStorage.removeItem("hora_Tarea");
+    localStorage.removeItem("descripcion");
+}
