@@ -54,7 +54,7 @@ input[type="time"] {
 input[type="text"]:hover,
 input[type="date"]:hover,
 input[type="time"]:hover {
-    border-color: #aaa;
+    border-color: #000000;
 }
 
 input[type="text"]:focus,
@@ -77,7 +77,7 @@ textarea {
 }
 
 textarea:hover {
-    border-color: #aaa;
+    border-color: #000000;
 }
 
 textarea:focus {
@@ -113,38 +113,38 @@ button:focus {
     box-shadow: 0 0 0 0.2rem rgba(92, 184, 92, 0.5);
 }
 
-#buttons button#consultar {
+#buttons button#consultarTarea {
     background-color: #007bff; /* Blue */
 }
 
-#buttons button#consultar:hover {
+#buttons button#consultarTarea:hover {
     background-color: #0056b3;
 }
 
-#buttons button#consultar:focus {
+#buttons button#consultarTarea:focus {
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
-#buttons button#actualizar {
+#buttons button#actualizarTarea {
     background-color: #f0ad4e; /* Orange */
 }
 
-#buttons button#actualizar:hover {
+#buttons button#actualizarTarea:hover {
     background-color: #d9534f; /* Reddish for update feel */
 }
 
-#buttons button#actualizar:focus {
+#buttons button#actualizarTarea:focus {
     box-shadow: 0 0 0 0.2rem rgba(240, 173, 78, 0.5);
 }
 
-#buttons button#eliminar {
+#buttons button#eliminarTarea {
     background-color: #d9534f; /* Red */
 }
 
-#buttons button#eliminar:hover {
+#buttons button#eliminarTarea:hover {
     background-color: #c9302c;
 }
 
-#buttons button#eliminar:focus {
+#buttons button#eliminarTarea:focus {
     box-shadow: 0 0 0 0.2rem rgba(217, 83, 79, 0.5);
 }

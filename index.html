@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="app.js" defer></script>
     <link rel="stylesheet" href="style.css">
+
     <title>Laboratorio 3</title>
   </head>
+  
   <body>
     <main>
       <h1>Formulario de Tareas</h1>
@@ -25,12 +26,13 @@
         <textarea name="descripcion" id="descripcion" placeholder="Ingresa una descripcion clara sobre la tarea que debes realizar."></textarea>
 
         <div id="buttons">
-            <button id="crear" onclick="crear()">Crear tarea</button>
-            <button id="consultar" onclick="consultar()">Consultar tarea</button>
-            <button id="actualizar" onclick="actualizar()">Actualizar tarea</button>
-            <button id="eliminar" onclick="eliminar()">Eliminar tarea</button>
+            <button type="button" id="crearTarea" onclick="crear()">Crear tarea</button>
+            <button type="button" id="consultarTarea" onclick="consultar()">Consultar tarea</button>
+            <button type="button" id="actualizarTarea" onclick="actualizar()">Actualizar tarea</button>
+            <button type="button" id="eliminarTarea" onclick="eliminar()">Eliminar tarea</button>
         </div>
       </form>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
