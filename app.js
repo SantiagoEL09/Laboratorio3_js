@@ -1,24 +1,30 @@
 // Crear Tarea
 function crear(){
+
     let nombre = document.getElementById("nombre_Tarea").value;
     let fecha = document.getElementById("fecha_Tarea").value;
     let hora = document.getElementById("hora_Tarea").value;
     let descripcion = document.getElementById("descripcion").value;
+    let espacio = `-- ${nombre} --`;
 
-    localStorage.setItem("nombre_Tarea", nombre);
-    localStorage.setItem("fecha_Tarea", fecha);
-    localStorage.setItem("hora_Tarea", hora);
-    localStorage.setItem("descripcion", descripcion);
+    localStorage.setItem(`Tarea: ${nombre}`, nombre);
+    localStorage.setItem(`Fecha: ${nombre}`, fecha);
+    localStorage.setItem(`Hora: ${nombre}`, hora);
+    localStorage.setItem(`Descripcion: ${nombre}`, descripcion);
+    localStorage.setItem(`-- ${nombre} --`, espacio);
+
+    limpiarCampo();
 }
 
 // Consultar Tarea
 function consultar(){
-    let nombre = localStorage.getItem("nombre_Tarea");
-    let fecha = localStorage.getItem("fecha_Tarea");
-    let hora = localStorage.getItem("hora_Tarea");
-    let descripcion =localStorage.getItem("descripcion");
 
-    document.getElementById("nombre_Tarea").value = nombre;
+    let nombre = document.getElementById("nombre_Tarea").value;
+
+    let fecha = localStorage.getItem(`Fecha: ${nombre}`);
+    let hora = localStorage.getItem(`Hora: ${nombre}`);
+    let descripcion =localStorage.getItem(`Descripcion: ${nombre}`);
+
     document.getElementById("fecha_Tarea").value = fecha;
     document.getElementById("hora_Tarea").value = hora;
     document.getElementById("descripcion").value = descripcion;    
@@ -26,21 +32,36 @@ function consultar(){
 
 // Actualizar Tarea
 function actualizar(){
+
     let nombre = document.getElementById("nombre_Tarea").value;
     let fecha = document.getElementById("fecha_Tarea").value;
     let hora = document.getElementById("hora_Tarea").value;
     let descripcion = document.getElementById("descripcion").value;
 
-    localStorage.setItem("nombre_Tarea", nombre);
-    localStorage.setItem("fecha_Tarea", fecha);
-    localStorage.setItem("hora_Tarea", hora);
-    localStorage.setItem("descripcion", descripcion);
+    localStorage.setItem(`Fecha: ${nombre}`, fecha);
+    localStorage.setItem(`Hora: ${nombre}`, hora);
+    localStorage.setItem(`Descripcion: ${nombre}`, descripcion);
+
+    limpiarCampo();
 }
 
 // Eliminar Tarea
 function eliminar(){
-    localStorage.removeItem("nombre_Tarea");
-    localStorage.removeItem("fecha_Tarea");
-    localStorage.removeItem("hora_Tarea");
-    localStorage.removeItem("descripcion");
+
+    let nombre = document.getElementById("nombre_Tarea").value;
+
+    localStorage.removeItem(`Tarea: ${nombre}`);
+    localStorage.removeItem(`Fecha: ${nombre}`);
+    localStorage.removeItem(`Hora: ${nombre}`);
+    localStorage.removeItem(`Descripcion: ${nombre}`);
+    localStorage.removeItem(`-- ${nombre} --`);
+
+    limpiarCampo();
+}
+
+function limpiarCampo(){
+    document.getElementById("nombre_Tarea").value = "";
+    document.getElementById("fecha_Tarea").value = "";
+    document.getElementById("hora_Tarea").value = "";
+    document.getElementById("descripcion").value = ""; 
 }
